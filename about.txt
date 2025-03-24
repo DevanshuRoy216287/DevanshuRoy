@@ -1,0 +1,27 @@
+About Me
+Hi! I'm [Your Name], a passionate student and aspiring developer with a love for technology and creativity. I have experience working with a variety of tools and platforms to create innovative and functional projects.
+
+I primarily work with Visual Studio Code (VSC), where I write code for different projects, including web development, software development, and more. My experience with Arduino IDE has allowed me to build interactive hardware-based projects, experimenting with sensors, motors, and other electronics.
+
+In addition to my coding skills, I'm also proficient in Blender, where I create 3D models, animations, and visual effects. Whether it's for personal projects or school assignments, I enjoy bringing my ideas to life through design and technology.
+
+I also use Wondershare for tasks related to video editing, screen recording, and more. It's a great tool for producing high-quality content.
+
+When I'm not working on tech projects, I enjoy [Your hobbies or interests]. I'm always looking for new challenges and opportunities to grow my skills.
+
+Skills
+Programming Languages: [Insert your languages here, e.g., JavaScript, Python, C++]
+Tools & IDEs: Visual Studio Code, Arduino IDE, Blender, Wondershare
+Web Development: [Your web-related skills, e.g., HTML, CSS, JavaScript, etc.]
+Electronics: Arduino, Sensors, Motors, etc.
+3D Modeling and Animation: Blender
+Video Editing: Wondershare Filmora
+Projects
+[Project Name 1]
+Description: [Brief description of your project, tools used, and the outcome.]
+
+[Project Name 2]
+Description: [Brief description of your project, tools used, and the outcome.]
+
+Contact Me
+If you would like to connect or discuss a project, feel free to reach out to me at [Your Email] or [Your Social Media Links]. I'm always open to collaboration and new opportunities!

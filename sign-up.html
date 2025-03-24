@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+    <title>Devanshu Roy | Sign up</title>
+    <link rel="icon" href="resources/profile_circular.png" type="image/x-icon">
+    <link rel="icon" href="resources/favicon_io/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="resources/favicon_io/favicon-16x16.png" sizes="16x16" type="image/png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign up with Devanshu Roy's website | View his projects | See notifications">
+    <meta name="keywords" content="Contact | Acheivements | Projects | About Me | Notifications">
+    <meta name="author" content="Devanshu Roy">
+    <meta property="og:title" content="Devanshu Roy">
+    <meta property="og:description" content="Get access to his projects | See notifications">
+    <meta property="og:image" content="Sign up with Devanshu Roy's website | View his projects | See notifications">
+    <meta property="og:url" content="">
+    <!-- FILL URL CONTENT AFTER GETTING DOMAIN -->
+    <meta name="robots" content="index, follow">
+
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 0vh;
+            font-family: 'Montserrat';
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        body.loading {
+            overflow: hidden;
+        }
+
+        .loading-overlay {
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #0d1117;
+            z-index: 9999;
+        }
+
+        .content {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            position: relative; 
+            height: 100vh;
+            width: 100%;
+            background-image: url('resources/background_main.png');
+            background-size: cover;  /* Ensures the background image covers the screen */
+            background-position: center;  /* Keeps the image centered */
+            background-attachment: fixed;  /* Keeps the image in place when scrolling */
+            overflow-x: hidden;  /* Prevents horizontal scrolling */;
+        }
+
+        body.loaded .loading-overlay {
+            display: none;
+        }
+
+        body.loaded .content {
+            display: flex;
+        }
+
+        .circle-button {
+            width: 3.2vw;
+            height: 3.2vw;
+            background-color: #151b23;
+            border-radius: 0.8vw;
+            position: fixed;
+            top: 2.5vh;
+            left: 0.7vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 5;
+            border: 0.6vh solid #151b23; 
+            box-sizing: border-box; 
+            box-shadow: inset 0 0 0 0.1vw rgb(203, 203, 203); 
+            transition: transform 0.05s ease, box-shadow 0.1s ease;
+            animation: slideFromLeft 4s ease-out forwards; /* Apply the animation */
+        }
+
+        @keyframes slideFromLeft {
+            0% {
+                left: -10vw;
+                opacity: 0.5;
+            }
+
+            70% {
+                left: -10vw;
+                opacity: 0.5;
+            }
+
+            85% {
+                left: 1.4vw;
+                opacity: 1;
+            }
+
+            88% {
+                left: 1vw;
+                opacity: 1;
+            }
+
+            100% {
+                left: 1.4vw;
+                opacity: 1;
+            }
+        }
+
+        .circle-button:hover {
+            transform: scale(1.05);
+        }
+
+        .menu-icon {
+            font-size: 1.8vw;
+            padding-bottom: 0.4vh;
+            color: white;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #0d1117;
+            color: rgb(203, 203, 203);
+            overflow-y: hidden;
+            transition: width 0.05s ease;
+            z-index: 1000;
+            border: solid 1px #343c44;
+        }
+
+        .sidebar.open {
+            width: 22.5vw;
+        }
+
+        .sidebar-content a {
+            display: block;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 8;
+            border-radius: 1vh;
+            padding: 1.5vh;
+            padding-top: 2vh;
+            text-decoration: none;
+            background-color: #151b23;
+            color: rgb(203, 203, 203);
+            font-size: 2.5vh;
+            margin: 5px 0;
+            transition: background-color 0.3s;
+            border: solid 1px #343c44;
+        }
+
+        .sidebar-content a:hover {
+            background-color: #0d1117;
+        }
+
+        .icon {
+            position: absolute;
+            width: 3.8vh;
+            height: 3.8vh;
+            left: 1.5vw;
+            vertical-align: middle;
+        }
+
+        .close-btn {
+            background-color: #0d1117;
+            border-radius: 50%;
+            border: none;
+            color: white;
+            font-size: 3vh;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .page-link {
+            padding-bottom: 0.3vh;
+            margin-bottom: 1.6vh;
+        }
+
+        .instructions {
+            position: absolute;
+            width: 20vw;
+            font-size: 2.25vh;
+            color: #5e646b;
+            margin-right: 10vh;
+            bottom: 5vh;
+        }
+
+        .sidebartitle {
+            font-size: 3vh; 
+            font-weight: normal;
+            padding-left: 2.5vh; 
+            margin-top: 5vh;
+            margin-bottom: 3.8vh;
+            color: white;
+        }
+
+        /*.surveyButton {
+            position: absolute;  
+            bottom: 11vh; 
+            right: 1.5vw;  
+            width: 4vw; 
+            height: 3.8vw; 
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+            z-index: 1002; 
+            transition: opacity 1s; 
+        }*/
+
+        .surveyButtonImg {
+            width: 3.5vw;
+            height: 3.5vw;
+            background-color: #151b23;
+            border-radius: 0.8vw;
+            position: fixed;
+            bottom: 5.3vh;
+            right: 2.9vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 5;
+            border: 0.6vh solid #151b23; 
+            box-sizing: border-box; 
+            box-shadow: inset 0 0 0 0.1vw rgb(203, 203, 203); 
+            transition: transform 0.05s ease, box-shadow 0.1s ease;
+            animation: slideFromRight 4s ease-out forwards; /* Apply the animation */
+        }
+
+        /* Define the animation */
+        @keyframes slideFromRight {
+            0% {
+                right: -10vw;
+                opacity: 0.5;
+            }
+
+            70% {
+                right: -10vw;
+                opacity: 0.5;
+            }
+
+            85% {
+                right: 3.5vw;
+                opacity: 1;
+            }
+
+            88% {
+                right: 3vw;
+                opacity: 1;
+            }
+
+            100% {
+                right: 3.5vw;
+                opacity: 1;
+            }
+        }
+
+        .surveyButtonImg:hover {
+            transform: scale(1.05);
+        }
+
+        .iframe {
+            position: fixed; 
+            width: 28%; 
+            height: 90%; 
+            border: solid 1px #343c44; 
+            border-radius: 0.7vw; 
+            bottom: 0; 
+            right: -0.7vw;
+        }
+
+        .image-container {
+            position: relative;
+            top: 6vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 0 0 0.6vw #000000, 0 0 0 0.7vw rgb(203, 203, 203);
+            height: auto;
+            transition: transform 0.05s ease, box-shadow 0.1s ease;
+            animation: fadeInEffect 4s ease-in; /* Apply the animation */
+        }
+
+        /* Define the animation */
+        @keyframes fadeInEffect {
+            0% {
+                opacity: 0;
+            }
+
+            90% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .profile_pic {
+            background-color: transparent;
+            border-radius: 50%;
+            width: 4vw;
+            height: 4vw;
+        }
+
+        .sign_in {
+            position: relative;
+            top: 11.5vh;
+            color: rgb(203, 203, 203) !important;
+            font-size: 1.8vw;
+            cursor: pointer;
+            transition: transform 0.05s ease, box-shadow 0.1s ease;
+            animation: fadeInEffect 4s ease-in; /* Apply the animation */
+        }
+
+        /* Define the animation */
+        @keyframes fadeInEffect {
+            0% {
+                opacity: 0;
+            }
+
+            90% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .sign_in:hover {
+            color: rgb(181, 181, 181)!important;
+        }
+
+        .signin-box {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            top: 12vh;
+            width: 27vw;
+            height: 63vh;
+            background-color: #151b23;
+            border: solid 1px #343c44;
+            border-radius: 3%;
+            padding-bottom: 1.2vw;
+            transition: transform 0.05s ease, box-shadow 0.1s ease;
+            animation: fadeInEffect 4s ease-in; /* Apply the animation */
+        }
+
+        /* Define the animation */
+        @keyframes fadeInEffect {
+            0% {
+                opacity: 0;
+            }
+
+            90% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .input-group1 {
+            position: relative;
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 0;
+            margin: 0;
+        }
+
+        .input-group2 {
+            position: relative;
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 0;
+            margin: 0;
+        }
+
+        .username {
+            position: absolute;
+            box-sizing: border-box;
+            align-items: center; 
+            justify-content: center; 
+            border: solid 1px #343c44;
+            border-radius: 3.75px;
+            background-color: #0d1117;
+            color: rgb(203, 203, 203);
+            font-size: 1.1vw;
+            width: 20vw;
+            padding: 4.5px 5.5px;
+            top: 1.6vw;
+        }
+
+        .username:hover {
+            background-color: #0b0e12;
+        }
+
+        .email {
+            position: absolute;
+            box-sizing: border-box;
+            align-items: center; 
+            justify-content: center; 
+            border: solid 1px #343c44;
+            border-radius: 3.75px;
+            background-color: #0d1117;
+            color: rgb(203, 203, 203);
+            font-size: 1.1vw;
+            width: 20vw;
+            padding: 4.5px 5.5px;
+            top: 6.2vw;
+        }
+
+        .email:hover {
+            background-color: #0b0e12;
+        }
+        
+        .password {
+            position: absolute;
+            box-sizing: border-box;
+            align-items: center; 
+            justify-content: center; 
+            border: solid 1px #343c44;
+            border-radius: 3.75px;
+            background-color: #0d1117;
+            color: rgb(203, 203, 203);
+            font-size: 1.1vw;
+            width: 20vw;
+            padding: 4.5px 5.5px;
+            top: 10.5vw;
+        }
+
+        .password:hover {
+            background-color: #0b0e12;
+        }
+
+        .Label1 {
+            position: absolute;
+            color: rgb(203, 203, 203) !important;
+            font-size: 1.2vw;
+            right: 16.9vw;
+            top: 2vw;
+        }
+
+        .Label2 {
+            position: absolute;
+            color: rgb(203, 203, 203) !important;
+            font-size: 1.2vw;
+            right: 17.4vw;
+            top: 13.8vw;
+        }
+
+        .Label3 {
+            position: absolute;
+            color: rgb(203, 203, 203) !important;
+            font-size: 1.2vw;
+            right: 19.7vw;
+            top: 8vw;
+        }
+
+        .submit-button {
+            position: absolute;
+            top: 24.5vw;
+            width: 20vw; 
+            padding: 1vw;
+            padding-top: 0.8vw;
+            padding-bottom: 0.8vw;
+            background-color: #084cfc; border-radius: 0.5vw; 
+            border: solid 1px rgb(203, 203, 203); 
+            font-size: 2.5vh; 
+            color: rgb(255, 255, 255); cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background-color: #073ec9;
+            border: solid 1px #073ec9; 
+        }
+
+        .notification {
+            position: absolute;
+            color: rgb(203, 203, 203) !important;
+            font-size: 1.1vw;
+            width: 24vw;
+            border-radius: 0.5vw;
+            margin-left: 7vh;
+            top: 21.4vw;
+        }
+
+        .signup-box {
+            position: absolute;
+            color: rgb(203, 203, 203);
+            border: solid 2px #343c44;
+            top: 49.4vw;
+            height: 4.5vw;
+            width: 26.9vw;
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 1.2vw;
+            border-radius: 0.8vw;
+            margin-bottom: 2vw;
+            transition: transform 0.05s ease, box-shadow 0.1s ease;
+            animation: fadeInEffect 4s ease-in; /* Apply the animation */
+        }
+
+        /* Define the animation */
+        @keyframes fadeInEffect {
+            0% {
+                opacity: 0;
+            }
+
+            90% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .copyright {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #5e646b;
+            right: 50vh;
+            left: 50vh;
+            top: 128vh;
+            font-size: 1.1vw;
+            transition: transform 0.05s ease, box-shadow 0.1s ease;
+            animation: fadeInEffect 4s ease-in; /* Apply the animation */
+        }
+
+        /* Define the animation */
+        @keyframes fadeInEffect {
+            0% {
+                opacity: 0;
+            }
+
+            90% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="loading-overlay" id="loadingOverlay">
+        <dotlottie-player id="lottiePlayer" src="https://lottie.host/ff6dabe1-13fc-4759-b5b3-c9b1dfe92800/TwOR2y5hnC.json" 
+                          background="#0d1117" 
+                          speed="0.8" 
+                          style="width: 275px; height: 125px" 
+                          direction="1"
+                          autoplay loop>
+        </dotlottie-player>
+    </div>
+
+    <div class="container">
+    <div class="content">
+
+        <div class="circle-button" onclick="toggleSidebar()" title="Sidebar Menu">
+            <span class="menu-icon">&#9776;</span>
+        </div>
+        <div class="sidebar open" id="sidebar">
+            <button class="close-btn" onclick="toggleSidebar()">&#10006;</button>
+            <h3 class="sidebartitle" id="sidebartitle">Sidebar Menu</h3>
+            <div style="background-color: #151b23; height: 100vh; border-top-left-radius: 2vh; border-top-right-radius: 2vh; padding: 2vh; border: solid 1px #343c44; padding-top: 3vh;">
+            <div class="sidebar-content">
+
+                <div class="page-link" style="padding-bottom: 0.3vh; padding-top: 1.5vh;">
+                    <a href="home.html"><img src="resources/sidebar/home.png" class="icon" class="icon1"> Home Page</a>
+                </div>
+                <div class="page-link">
+                    <a href="contact.html"><img src="resources/sidebar/contact.png" class="icon" class="icon2"> Contact</a>
+                </div>
+                <div class="page-link">
+                    <a href="portfolio.html"><img src="resources/sidebar/portfolio.png" class="icon" class="icon3"> Portfolio</a>
+                </div>
+                <div class="page-link">
+                    <a href="notification.html"><img src="resources/sidebar/notifications.png" class="icon" class="icon4"> Notification</a>
+                </div>
+                <div class="page-link">
+                <a href="sign-in.html"><img src="resources/sidebar/sign_in.png" class="icon" class="icon5"> Sign In</a>
+                </div>
+
+                <div class="instructions"><center>
+                    Click on 'Home Page' to reach home |<br> Click on 'Contact' to contact me |<br> Click on 'Portfolio' to see my projects |<br> Click on 'notifications' to see latest blogs and messages from me |<br> Click on 'Sign In' to sign in<br></center>
+                </div>
+
+            </div>
+            
+            </div>
+                
+        </div>
+
+        <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const loadingOverlay = document.getElementById('loadingOverlay');
+                    const content = document.querySelector('.content');
+                    const sidebar = document.getElementById('sidebar');
+
+                    // Remove any "open" class that might be added in HTML or previous JavaScript.
+                    sidebar.classList.remove('open');
+
+                    // Timeout to hide the loading overlay and show the content.
+                    setTimeout(function() {
+                        loadingOverlay.style.display = 'none';
+                        content.style.display = 'flex';
+
+                        // Remove loading class to enable scrolling
+                        document.body.classList.remove('loading');
+                    }, 2000);  // You can adjust the timeout duration
+
+                    // Add loading class on initial page load
+                    document.body.classList.add('loading');
+
+                    // Toggle the sidebar open/close when called
+                    function toggleSidebar() {
+                        sidebar.classList.toggle('open');
+                    }
+
+                    // Toggle the dropdown menu
+                    function toggleDropdown() {
+                        const dropdownContent = document.getElementById('dropdownContent');
+                        dropdownContent.classList.toggle('show');
+                    }
+
+                    // Expose the functions to the global window object
+                    window.toggleSidebar = toggleSidebar;
+                    window.toggleDropdown = toggleDropdown;
+                });
+
+        </script>
+
+        <div class="image-container">
+        <a href="home.html"><img src="resources/profile_circular.png" class="profile_pic"></a>
+        </div>
+
+        <p class="sign_in">Sign-up to my website</p>
+
+        <div class="signin-box">
+            <br><br>
+            <div class="signup">
+                    <center>
+                        <p class="Label1">Username:</p><br>
+                    </center>
+                    <div class="input-group1">
+                        <input type="text" id="username" name="text" placeholder="Username:" class="username" autocomplete="off" required>
+                    </div>
+    
+                    <center>
+                        <p class="Label3">Email:</p><br>
+                    </center>
+                    <div class="input-group1">
+                        <input type="email" id="email" name="text" placeholder="Email (please include domain):" class="email" autocomplete="off" required>
+                    </div>
+    
+                    <center>
+                        <p class="Label2">Password:</p><br>
+                    </center>
+    
+                    <div class="input-group2">
+                        <input type="password" id="password" name="password" placeholder="Create password:" class="password" autocomplete="off" required>
+                    </div>
+    
+                    <div class="notification">
+                        <input type="checkbox" id="notificationcheck" name="notification" value="yes">
+                        Avail benefits?
+                    </div>
+                    <br>
+    
+                    <div class="submit-group" style="display: flex; align-items: center; justify-content: center; padding-top: 2vh;">
+                        <button class="submit-button" type="submit" onclick="Validate()">Submit</button>
+                    </div>
+                    <br>
+            </div>
+        </div>
+
+        <p id="data" style="z-index: 100000;"></p>
+
+        <div class="signup-box">
+            Already have an account? <a href="sign-in.html"><div style="color: #3870fd;"> Sign in.</div></a>
+        </div>
+
+        <footer><center>
+            <div class="copyright">
+                <p style="user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">&#169; 2024 Devanshu Roy. All rights reserved. This content may not be reproduced without permission.</p>
+            </div>
+        </center></footer>
+
+
+        <section class="survey" title="Survey">
+            <div id="surveyButton" style="cursor: pointer;">
+                <img src="resources/survey.png" class="surveyButtonImg">
+            </div>
+
+            <div id="Iframe" style="display: none;">
+                <iframe src="https://cdn.botpress.cloud/webchat/v2.3/shareable.html?configUrl=https://files.bpcontent.cloud/2024/12/14/19/20241214190757-LT68T1ME.json" class="iframe">
+                </iframe>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const surveyButton = document.getElementById('surveyButton');
+                    const iframeContainer = document.getElementById('Iframe');
+
+                    function toggleIframe() {
+                        if (iframeContainer.style.display === 'block') {
+                            iframeContainer.style.display = 'none'; // Close the iframe if open
+                        } else {
+                            iframeContainer.style.display = 'block'; // Open the iframe if closed
+                        }
+                    }
+
+                    surveyButton.addEventListener('click', function() {
+                        toggleIframe(); // Toggle iframe visibility on button click
+                    });
+                });
+            </script>
+        </section>
+
+        <script src="sign-up.js"></script>
+
+</body>
+</html>

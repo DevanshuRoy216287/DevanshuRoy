@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View User Data</title>
+</head>
+<body>
+
+    <h1>Login to View User Data</h1>
+    
+    <!-- Login Form -->
+        <label for="username">Username: </label>
+        <input type="text" id="loginUsername" required autocomplete="off"><br><br>
+        
+        <label for="password">Password: </label>
+        <input type="password" id="loginPassword" required autocomplete="off"><br><br>
+        
+        <button type="submit" onclick="event.preventDefault(); validateLogin();">Login</button>
+    
+    <!-- User Data Table (Hidden by default) -->
+    <div id="userDataContainer" style="display: none;">
+        <h1>Registered User Data</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Notifications</th>
+                </tr>
+            </thead>
+            <tbody id="userData">
+                <!-- User data will be inserted here -->
+            </tbody>
+        </table>
+
+        <button onclick="clearData()">Clear data</button>
+    </div>
+
+    <script>
+        // Function to display stored user data
+        function displayUserData() {
+            var userDataContainer = document.getElementById("userData");
+
+            // Loop through all the keys in localStorage
+            for (let i = 0; i < localStorage.length; i++) {
+                // Get the key (username) from localStorage
+                let username = localStorage.key(i);
+
+                // Get the user data from localStorage and parse it as an object
+                let user = JSON.parse(localStorage.getItem(username));
+
+                // Create a new row for each user and populate it with user data
+                let row = document.createElement("tr");
+
+                row.innerHTML = `
+                    <td>${user.username}</td>
+                    <td>${user.email}</td>
+                    <td>${user.password}</td>
+                    <td>${user.notifications}</td>
+                `;
+
+                // Append the row to the table
+                userDataContainer.appendChild(row);
+            }
+        }
+
+        // Function to validate user login
+        function validateLogin() {
+            event.preventDefault();
+
+            var username = document.getElementById("loginUsername").value;
+            var password = document.getElementById("loginPassword").value;
+
+            if (username=="") {
+                alert("Invalid username or password.");
+                window.location.href="index.html";
+                return false;
+            }
+
+            else if (password=="") {
+                alert("Invalid username or password.");
+                window.location.href="index.html";
+                return false;
+            }
+
+            else if (!username=="devanshu") {
+                alert("Invalid username or password.");
+                window.location.href="index.html";
+                return false;
+            }
+
+            else if (!password=="987654321") {
+                alert("Invalid username or password.");
+                window.location.href="index.html";
+                return false;
+            }
+
+            // If login is successful, display user data
+            else {
+                displayUserData();
+                document.getElementById("userDataContainer").style.display = "block";
+                document.getElementById("loginForm").style.display = "none";
+                return true;
+            }
+        }
+
+        // Function to clear all user data from localStorage
+        function clearData() {
+            localStorage.clear();
+            alert("All data cleared.");
+            location.reload(); // Reload the page to reset the state
+        }
+    </script>
+
+</body>
+</html>

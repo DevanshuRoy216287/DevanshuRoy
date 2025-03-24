@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+    <title>Devanshu Roy | Home</title>
+    <link rel="icon" href="resources/profile_circular.png" type="image/x-icon">
+    <link rel="icon" href="resources/favicon_io/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="resources/favicon_io/favicon-16x16.png" sizes="16x16" type="image/png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View Devanshu Roy's website | View his Achievements | Projects | About Me | Contact him">
+    <meta name="keywords" content="Contact | Acheivements | Projects | About Me">
+    <meta name="author" content="Devanshu Roy">
+    <meta property="og:title" content="Devanshu Roy">
+    <meta property="og:description" content="View Devanshu Roy's website | View his Achievements | Projects | About Me | Contact him">
+    <meta property="og:image" content="View Devanshu Roy's website | View his Achievements | Projects | About Me | Contact him">
+    <meta property="og:url" content="">
+    <!-- FILL URL CONTENT AFTER GETTING DOMAIN -->
+    <meta name="robots" content="index, follow">
+
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="loading-overlay" id="loadingOverlay">
+        <dotlottie-player id="lottiePlayer" src="https://lottie.host/ff6dabe1-13fc-4759-b5b3-c9b1dfe92800/TwOR2y5hnC.json" 
+                          background="#0d1117" 
+                          speed="0.8" 
+                          style="width: 275px; height: 125px" 
+                          direction="1"
+                          autoplay loop>
+        </dotlottie-player>
+    </div>
+
+    <div class="container">
+    <div class="content">
+
+        <div class="circle-button" onclick="toggleSidebar()" title="Sidebar menu">
+            <span class="menu-icon">&#9776;</span>
+        </div>
+        <div class="sidebar open" id="sidebar">
+            <button class="close-btn" onclick="toggleSidebar()">&#10006;</button>
+            <h3 class="sidebartitle" id="sidebartitle">Sidebar Menu</h3>
+            <div style="background-color: #151b23; height: 100vh; border-top-left-radius: 2vh; border-top-right-radius: 2vh; padding: 2vh; border: solid 1px #343c44; padding-top: 3vh;">
+            <div class="sidebar-content">
+
+                <div class="page-link" style="padding-bottom: 0.3vh; padding-top: 1.5vh;">
+                    <a href="home.html"><img src="resources/sidebar/home.png" class="icon" class="icon1"> Home Page</a>
+                </div>
+                <div class="page-link">
+                    <a href="contact.html"><img src="resources/sidebar/contact.png" class="icon" class="icon2"> Contact</a>
+                </div>
+                <div class="page-link">
+                    <a href="portfolio.html"><img src="resources/sidebar/portfolio.png" class="icon" class="icon3"> Portfolio</a>
+                </div>
+                <div class="page-link">
+                    <a href="notification.html"><img src="resources/sidebar/notifications.png" class="icon" class="icon4"> Notification</a>
+                </div>
+                <div class="page-link">
+                <a href="sign-in.html"><img src="resources/sidebar/sign_in.png" class="icon" class="icon5"> Sign In</a>
+                </div>
+
+                <div class="instructions"><center>
+                    Click on 'Home Page' to reach home |<br> Click on 'Contact' to contact me |<br> Click on 'Portfolio' to see my projects |<br> Click on 'notifications' to see latest blogs and messages from me |<br> Click on 'Sign In' to sign in<br></center>
+                </div>
+
+            </div>
+            
+            </div>
+                
+        </div>
+
+        <div id="header" class="header" style="position: absolute; z-index: 2; background-color: #0b0e13; opacity: 0.9; width: 100vw; height: 9vh; top: 0; left: 0;">
+
+            <a href="index.html"><img class="profile-pic" src="resources/profile_circular.png"></a><!--#0b0e13-->
+
+            <a href="index.html"><p class="name"><b class="bold-font">D</b>evanshu <b class="bold-font">R</b>oy |</p></a>
+            <a href="index.html"><p class="page-name"><b class="bold-font">H</b>ome</p></a>
+
+            <div class="searchbar">
+                <input type="text" id="searchInput" placeholder="Search..." onfocus="showItems()">
+                <button id="searchButton" onclick="searchItems()">
+                    <img src="resources/search.png" class="search-image" alt="search icon">
+                </button>
+            </div>
+            
+            <ul id="itemsList"><center>
+                <a href="index.html" style="text-decoration: none;"><li class="items" style="margin-top: 1.5vh;">Home <p class="search-side-text"> --reach home--</p></li></a>
+                <a href="contact.html" style="text-decoration: none;"><li class="items">Contact <p class="search-side-text"> --contact me--</p></li></a>
+                <a href="portfolio.html" style="text-decoration: none;"><li class="items">Portfolio <p class="search-side-text"> --see my projects--</p></li></a>
+                <a href="notification.html" style="text-decoration: none;"><li class="items">Notification <p class="search-side-text"> --view latest messages--</p></li></a>
+                <a href="sign-in.html" style="text-decoration: none;"><li class="items">Sign in <p class="search-side-text"> --sign in to website--</p></li></a>
+                <a href="sign-up.html" style="text-decoration: none;"><li class="items" style="margin-bottom: 1.5vh;">Sign up <p class="search-side-text"> --sign up to website</p></li></a>
+            </center></ul>
+            
+
+            <a href="contact.html"><button class="contact" title="Contact me"><img src="resources/sidebar/contact.png" class="contact-icon"></button></a>
+
+            <a href="portfolio.html"><button class="portfolio" title="See my projects"><img src="resources/sidebar/portfolio.png" class="portfolio-icon"></button></a>
+
+            <a href="notification.html"><button class="notification" title="View latest blogs and messages"><img src="resources/sidebar/notifications.png" class="notification-icon"></button></a>
+
+            <a href="sign-in.html"><button class="sign-in" title="Sign in to website"><img src="resources/sidebar/sign_in.png" class="sign-in-icon"></button></a>
+
+            <hr class="horizontal">
+
+        </div>
+
+        <img src="resources/home_main.png" class="background">
+
+        <div id="brief">
+
+            <p class="title">Code. Create. Innovate</p>
+            
+        </div>
+
+        <div id="contact">
+
+        </div>
+
+        <section class="survey" title="Survey">
+            <div id="surveyButton" style="cursor: pointer;">
+                <img src="resources/survey.png" class="surveyButtonImg">
+            </div>
+
+            <div id="Iframe" style="display: none;">
+                <iframe src="https://cdn.botpress.cloud/webchat/v2.3/shareable.html?configUrl=https://files.bpcontent.cloud/2024/12/14/19/20241214190757-LT68T1ME.json" class="iframe">
+                </iframe>
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+    
+    </div>
+    </div>
+
+</body>
+
+</html>

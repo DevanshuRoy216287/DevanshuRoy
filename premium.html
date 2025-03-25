@@ -68,14 +68,14 @@
                     <a href="portfolio.html"><img src="resources/sidebar/portfolio.png" class="icon" class="icon3"> Portfolio</a>
                 </div>
                 <div class="page-link">
-                    <a href="notification.html"><img src="resources/sidebar/notifications.png" class="icon" class="icon4"> Notification</a>
+                    <a href="community.html"><img src="resources/sidebar/community.png" class="icon" class="icon4"> Community</a>
                 </div>
                 <div class="page-link">
-                <a href="sign-in.html"><img src="resources/sidebar/sign_in.png" class="icon" class="icon5"> Sign In</a>
+                <a href="sign-in.html"><img src="resources/sidebar/sign_in.png" class="icon5"> Sign In</a>
                 </div>
 
                 <div class="instructions"><center>
-                    Click on 'Home Page' to reach home |<br> Click on 'Contact' to contact me |<br> Click on 'Portfolio' to see my projects |<br> Click on 'notifications' to see latest blogs and messages from me |<br> Click on 'Sign In' to sign in<br></center>
+                    Click on 'Home Page' to reach home |<br> Click on 'Contact' to contact me |<br> Click on 'Portfolio' to see my projects |<br> Click on 'Community' to see latest blogs and messages from me |<br> Click on 'Sign In' to sign in<br></center>
                 </div>
 
             </div>
@@ -100,9 +100,9 @@
             
             <ul id="itemsList"><center>
                 <a href="index.html" style="text-decoration: none;"><li class="items" style="margin-top: 1.5vh;"><p class="main-text">Home</p> <p class="search-side-text"> --reach home--</p></li></a>
-                <a href="#contact" style="text-decoration: none;"><li class="items"><p class="main-text">Contact</p> <p class="search-side-text"> --contact me--</p></li></a>
-                <a href="#portfolio" style="text-decoration: none;"><li class="items"><p class="main-text">Portfolio</p> <p class="search-side-text"> --see my projects--</p></li></a>
-                <a href="#notification" style="text-decoration: none;"><li class="items"><p class="main-text">Notification</p> <p class="search-side-text"> --view latest messages--</p></li></a>
+                <a onclick="location.href='#contact'" style="text-decoration: none;"><li class="items"><p class="main-text">Contact</p> <p class="search-side-text"> --contact me--</p></li></a>
+                <a onclick="location.href='#portfolio'" style="text-decoration: none;"><li class="items"><p class="main-text">Portfolio</p> <p class="search-side-text"> --see my projects--</p></li></a>
+                <a onclick="location.href='#community'" style="text-decoration: none;"><li class="items"><p class="main-text">Community</p> <p class="search-side-text"> --view latest updates--</p></li></a>
                 <a href="sign-in.html" style="text-decoration: none;"><li class="items"><p class="main-text">Sign in</p> <p class="search-side-text"> --sign in to website--</p></li></a>
                 <a href="sign-up.html" style="text-decoration: none;"><li class="items" style="margin-bottom: 1.5vh;"><p class="main-text">Sign up</p> <p class="search-side-text"> --sign up to website--</p></li></a>
             </center></ul>
@@ -112,7 +112,7 @@
 
             <a href="portfolio.html"><button class="portfolio" title="See my projects"><img src="resources/sidebar/portfolio.png" class="portfolio-icon"></button></a>
 
-            <a href="notification.html"><button class="notification" title="View latest blogs and messages"><img src="resources/sidebar/notifications.png" class="notification-icon"></button></a>
+            <a href="community.html"><button class="notification" title="View latest blogs and messages"><img src="resources/sidebar/community.png" class="notification-icon"></button></a>
 
             <a href="sign-in.html"><button class="sign-in" title="Sign in to website"><b>Sign In</b></button></a>
 
@@ -141,6 +141,54 @@
             </div>
         </div>
 
+        <section id="portfolio">
+            <p class="portfolio-title"><b>Look at my work</b> ➜</p>
+            <div class="portfolio-card" id="c1">
+                <div class="portfolio-image">
+                    <img src="resources/portfolio/1.png" id="i1">
+                </div>
+
+                <div class="portfolio-text">
+                    <center>
+                    <div class="random-container">
+                        <p class="project-title">Robot car 1</p>
+                        <p class="project-description">A rc car, controlled by mobile app. Using arduino/esp as microcontrollers, 12 volt dc motors and a bit of passion...</p>
+                    </div>
+                    </center>
+                </div>
+            </div>
+            <div class="portfolio-card" id="c2">
+                <div class="portfolio-image">
+                    <img src="resources/portfolio/2.jpg" id="i2">
+                </div>
+
+                <div class="portfolio-text">
+                    <center>
+                    <div class="random-container">
+                        <p class="project-title">Robot car 2</p>
+                        <p class="project-description">Advances rc car, controller by app. Using esp as microcontroller, 12 volt 500rpm high torque motors, and a metal body...</p>
+                    </div>
+                    </center>
+                </div>
+            </div>
+            <div class="portfolio-card" id="c3">
+                <div class="portfolio-image">
+                    <img src="resources/portfolio/3.png" class="portfolio-image" id="i3">
+                </div>
+
+                <div class="portfolio-text">
+                    <center>
+                    <div class="random-container">
+                        <p class="project-title">Millets Magic</p>
+                        <p class="project-description">A website celebrating millets, its various kinds and benefits. Link- <a style="word-break: break-all; /* Forces breaking */" href="https://milletsmagic.github.io/MilletsMagic/" target="_blank"> https://milletsmagic.github.io/MilletsMagic/</a></p>
+                    </div>
+                    </center>
+                </div>
+            </div>
+
+            <button onclick="seeMore(1)" id="seeMore">See More</button>
+        </section>
+
         <section class="survey" title="Survey">
             <div id="surveyButton" style="cursor: pointer;">
                 <img src="resources/survey.png" class="surveyButtonImg">
@@ -152,7 +200,7 @@
             </div>
         </section>
 
-        <script src="common.js"></script>
+        <script src="script.js"></script>
     
     </div>
     </div>

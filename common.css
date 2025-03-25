@@ -144,10 +144,12 @@ body.loaded .content {
     margin: 5px 0;
     transition: background-color 0.3s;
     border: solid 1px #343c44;
+    transition: transform 0.25s ease-in-out; /* Animation duration */
 }
 
 .sidebar-content a:hover {
     background-color: #0d1117;
+    transform: scale(1.02);
 }
 
 .icon {
@@ -155,6 +157,14 @@ body.loaded .content {
     width: 3.8vh;
     height: 3.8vh;
     left: 1.5vw;
+    vertical-align: middle;
+}
+
+.icon5 {
+    position: absolute;
+    width: 4.7vh !important; 
+    height: 4.7vh !important;
+    left: 1.2vw;
     vertical-align: middle;
 }
 
@@ -503,8 +513,8 @@ body.loaded .content {
 .contact {
     position: absolute;
     top: 1.2vh;
-    right: 18.8vw;
-    width: 3.5vw;
+    right: 19.2vw;
+    width: 3.3vw;
     height: 2.7vw;
     font-size: 2vh;
     background-color: #151b23;
@@ -529,17 +539,17 @@ body.loaded .content {
 
 .contact-icon {
     position: absolute;
-    top: 1.2vh;
-    left: 2.1vh;
-    width: 3.2vh;
-    height: 3.2vh;
+    top: 1.35vh;
+    left: 1.9vh;
+    width: 3.1vh;
+    height: 3.1vh;
 }
 
 .portfolio {
     position: absolute;
     top: 1.2vh;
-    right: 14.5vw;
-    width: 3.5vw;
+    right: 14.7vw;
+    width: 3.3vw;
     height: 2.7vw;
     font-size: 2vh;
     background-color: #151b23;
@@ -564,17 +574,17 @@ body.loaded .content {
 
 .portfolio-icon {
     position: absolute;
-    top: 1.2vh;
-    left: 2vh;
-    width: 3.3vh;
-    height: 3.3vh;
+    top: 1.35vh;
+    left: 1.85vh;
+    width: 3.1vh;
+    height: 3.1vh;
 }
 
 .notification {
     position: absolute;
     top: 1.2vh;
-    right: 10.2vw;
-    width: 3.5vw;
+    right: 10.3vw;
+    width: 3.3vw;
     height: 2.7vw;
     font-size: 2vh;
     background-color: #151b23;
@@ -600,9 +610,9 @@ body.loaded .content {
 .notification-icon {
     position: absolute;
     top: 1.3vh;
-    left: 2vh;
+    left: 1.85vh;
     width: 3.1vh;
-    height: 3.1vh;
+    height: 2.9vh;
 }
 
 .sign-in {
@@ -703,7 +713,7 @@ body.loaded .content {
     padding: 2vh;
     padding-left: 6vh;
     padding-right: 4vh;
-    letter-spacing: 0.35vh;
+    letter-spacing: 0.3vh;
 }
 
 .slideshow {
@@ -712,7 +722,7 @@ body.loaded .content {
     border-radius: 1.3vh;
     color: rgb(191, 191, 191);
     position: absolute;
-    top: 65vh;
+    top: 63vh;
     left: 34vh;
     width: 65%;
     height: 15vh;
@@ -800,4 +810,150 @@ body.loaded .content {
 .dot.active {
     background-color: white;
     transform: scale(1.3);
+}
+
+.portfolio-title {
+    position: absolute;
+    top: 96vh;
+    left: 17.5vw;
+    font-size: 3vh;
+    letter-spacing: 0.3vh;
+    color: white;
+    cursor: pointer;
+}
+
+.portfolio-card {
+    background-color: #1b232c;
+    border: solid 1px #343c44;
+    border-radius: 1.5vh;
+    position: absolute;
+    width: 23%;
+    height: 60vh;
+    box-shadow: 2vh 2vh 1vh #000000;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.25s ease-in-out; /* Animation duration */
+}
+
+.portfolio-card:hover {
+    box-shadow: 2.5vh 2.5vh 2vh #000000;
+    border: solid 1px #5e646b;
+    transform: scale(1.02);
+}
+
+#c1 {
+    position: absolute;
+    top: 110vh;
+    left: 11vw;
+}
+
+#c2 {
+    position: absolute;
+    top: 110vh;
+    left: 40vw;
+}
+
+#c3 {
+    position: absolute;
+    top: 110vh;
+    right: 8vw;
+}
+
+.portfolio-image {
+    position: absolute;
+    width: 100%;
+    height: 43%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+#i1 {
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    left: -10%;
+    top: -15%;
+}
+
+#i2 {
+    position: absolute;
+    width: 120%;
+    height: 115%;
+    left: -5%;
+    top: -10%;
+}
+
+#i3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.portfolio-text {
+    text-align: center;
+}
+
+.random-container {
+    position: absolute;
+    top: 25vh;
+    left: -7%;
+    width: 100%;
+    color: rgb(191, 191, 191);
+    padding: 2vh;
+    padding-left: 4vh;
+    padding-right: 4vh;
+    letter-spacing: 0.3vh;
+}
+
+.project-title {
+    font-size: 3.5vh;
+    font-family: 'Montserrat';
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.3vh;
+    word-spacing: 0.4vh;
+}
+
+.project-description {
+    font-size: 2.1vh;
+    line-height: 4vh;
+    width: 80%;
+    color: rgb(191, 191, 191);
+    letter-spacing: 0.2vh;
+}
+
+#seeMore {
+    position: absolute;
+    top: 172vh;
+    right: 5vw;
+    width: 10vw;
+    height: 4vw;
+    font-size: 2.5vh;
+    font-family: 'Montserrat';;
+    background-color: #084cfc;
+    color: white;
+    border: solid 1px #151b23;
+    border-radius: 4vh;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none; /* Prevents text selection */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    transition: transform 0.25s ease-in-out; /* Animation duration */
+    box-shadow: 0px 0px 15px 8px #000000;
+    font-weight: bold;
+}
+
+#seeMore:hover {
+    background-color: #0c41c6;
+    border: solid 1px rgb(203, 203, 203);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px 10px #000000;
 }

@@ -116,3 +116,14 @@ document.addEventListener('DOMContentLoaded', function() {
     dots.forEach((dot, index) => dot.addEventListener("click", () => showSlide(index)));
     showSlide(0);
 });
+
+function seeMore(option) {
+    if (option === 0) {
+        alert("Full portfolio is accessible as a premium feature. Sign up or sign in to an existing account, to access.");
+        setTimeout(function() {
+            window.location.href = "sign-in.html";
+        }, 500); // Redirect after 5 seconds
+    } else if (option === 1) {
+        window.location.href = "portfolio.html"; // Redirect immediately
+    }
+}

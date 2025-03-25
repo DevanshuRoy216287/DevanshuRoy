@@ -171,10 +171,12 @@
             margin: 5px 0;
             transition: background-color 0.3s;
             border: solid 1px #343c44;
+            transition: transform 0.25s ease-in-out; /* Animation duration */
         }
 
         .sidebar-content a:hover {
             background-color: #0d1117;
+            transform: scale(1.02);
         }
 
         .icon {
@@ -551,6 +553,14 @@
             }
         }
 
+        .icon5 {
+    position: absolute;
+    width: 4.7vh !important; 
+    height: 4.7vh !important;
+    left: 1.2vw;
+    vertical-align: middle;
+}
+
     </style>
 
 </head>
@@ -580,7 +590,7 @@
             <div class="sidebar-content">
 
                 <div class="page-link" style="padding-bottom: 0.3vh; padding-top: 1.5vh;">
-                    <a href="index.html"><img src="resources/sidebar/home.png" class="icon" class="icon1"> Home Page</a>
+                    <a href="home.html"><img src="resources/sidebar/home.png" class="icon" class="icon1"> Home Page</a>
                 </div>
                 <div class="page-link">
                     <a href="contact.html"><img src="resources/sidebar/contact.png" class="icon" class="icon2"> Contact</a>
@@ -589,14 +599,14 @@
                     <a href="portfolio.html"><img src="resources/sidebar/portfolio.png" class="icon" class="icon3"> Portfolio</a>
                 </div>
                 <div class="page-link">
-                    <a href="notification.html"><img src="resources/sidebar/notifications.png" class="icon" class="icon4"> Notification</a>
+                    <a href="community.html"><img src="resources/sidebar/community.png" class="icon" class="icon4"> Community</a>
                 </div>
                 <div class="page-link">
-                <a href="sign-up.html"><img src="resources/sidebar/sign_in.png" class="icon" class="icon5"> Sign Up</a>
+                <a href="sign-up.html"><img src="resources/sidebar/sign_in.png" class="icon5"> Sign Up</a>
                 </div>
 
                 <div class="instructions"><center>
-                    Click on 'Home Page' to reach home |<br> Click on 'Contact' to contact me |<br> Click on 'Portfolio' to see my projects |<br> Click on 'notifications' to see latest blogs and messages from me |<br> Click on 'Sign Up' to sign up<br></center>
+                    Click on 'Home Page' to reach home |<br> Click on 'Contact' to contact me |<br> Click on 'Portfolio' to see my projects |<br> Click on 'Community' to see latest blogs and messages from me |<br> Click on 'Sign In' to sign in<br></center>
                 </div>
 
             </div>

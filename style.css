@@ -4,6 +4,8 @@ html, body {
     height: 100%; /* Ensure the height of the body is 100% */
     font-family: 'Montserrat';
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    scroll-behavior: smooth;
+    scroll-padding-top: 25vh;
 }
 
 body.loading {
@@ -30,7 +32,7 @@ body.loading {
     align-items: center; 
     justify-content: center; 
     position: relative; 
-    height: 200vh;  /* You may need to adjust this based on your actual content height */
+    height: 390vh;  /* You may need to adjust this based on your actual content height */
     width: 99.6vw;
     background-color: #0d1117;
     background-size: cover;
@@ -286,8 +288,8 @@ body.loaded .content {
     width: 100%;
     height: 8vh;
     background-color: rgba(13, 17, 23, 0.5); /* Semi-transparent background */
-    backdrop-filter: blur(6px); /* Apply blur effect */
-    -webkit-backdrop-filter: blur(6px); /* For Safari */
+    backdrop-filter: blur(7px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(7px); /* For Safari */
     border-bottom: solid 1px #343c44;
     padding: 0;
     transition: transform 0.05s ease, box-shadow 0.1s ease;
@@ -543,6 +545,12 @@ body.loaded .content {
     left: 1.9vh;
     width: 3.1vh;
     height: 3.1vh;
+}
+
+#portfolio-imitation {
+    position: absolute;
+    top: 110vh;
+    left: 0;
 }
 
 .portfolio {
@@ -819,7 +827,6 @@ body.loaded .content {
     font-size: 3vh;
     letter-spacing: 0.3vh;
     color: white;
-    cursor: pointer;
 }
 
 .portfolio-card {
@@ -827,7 +834,7 @@ body.loaded .content {
     border: solid 1px #343c44;
     border-radius: 1.5vh;
     position: absolute;
-    width: 23%;
+    width: 21%;
     height: 60vh;
     box-shadow: 2vh 2vh 1vh #000000;
     overflow: hidden;
@@ -844,7 +851,7 @@ body.loaded .content {
 #c1 {
     position: absolute;
     top: 110vh;
-    left: 11vw;
+    left: 15vw;
 }
 
 #c2 {
@@ -856,7 +863,7 @@ body.loaded .content {
 #c3 {
     position: absolute;
     top: 110vh;
-    right: 8vw;
+    right: 14vw;
 }
 
 .portfolio-image {
@@ -909,7 +916,7 @@ body.loaded .content {
 }
 
 .project-title {
-    font-size: 3.5vh;
+    font-size: 3vh;
     font-family: 'Montserrat';
     color: white;
     cursor: pointer;
@@ -921,7 +928,7 @@ body.loaded .content {
 .project-description {
     font-size: 2.1vh;
     line-height: 4vh;
-    width: 80%;
+    width: 85%;
     color: rgb(191, 191, 191);
     letter-spacing: 0.2vh;
 }
@@ -956,4 +963,507 @@ body.loaded .content {
     border: solid 1px rgb(203, 203, 203);
     transform: scale(1.05);
     box-shadow: 0px 0px 15px 10px #000000;
+}
+
+#community {
+    height: 100vh;
+    width: 70vw;
+    position: absolute;
+    top: 208vh;
+    left: 17vw;
+    border-radius: 4vh;
+    background-color: #11161d;
+    border: solid 1px #343c44;
+    box-shadow: 2vh 2vh 1vh #000000;
+}
+
+.community-title {
+    position: absolute;
+    top: 195vh;
+    left: 40vw;
+    font-size: 3.3vh;
+    font-family: 'Montserrat';
+    color: white;
+    letter-spacing: 0.5vh;
+    word-spacing: 0.8vh;
+    font-weight: bold;
+    text-shadow: 1vh 1vh 1vh #000000;
+    z-index: 1;
+}
+
+.message {
+    background-color: #1b232c;
+    color: rgb(191, 191, 191);
+    border-radius: 1.5vh;
+    border-top-left-radius: 0;
+    box-shadow: 0.5vh 0.5vh 1vh #000000;
+    user-select: none; /* Prevents text selection */
+}
+
+#m1 {
+    position: absolute;
+    top: 5vh;
+    left: 7vw;
+    width: 56vw;
+    height: 21vh;
+    transition: transform 0.35s ease-in-out; /* Animation duration */
+}
+
+#m1:hover {
+    box-shadow: 1vh 1vh 1vh #000000 !important;
+    transform: scale(1.005);
+    background-color: #202932;
+    border: solid 1px #5e646b;
+}
+
+#Community-respond {
+    position: absolute;
+    top: 11vh;
+    left: 6vw;
+    width: 38vw;
+    height: 3vh;
+    border-radius: 1vh;
+    border: solid 1px #5e646b;
+    background-color: #151b23;
+    color: rgb(191, 191, 191);
+    padding: 2vh;
+    font-size: 2.3vh;
+    letter-spacing: 0.3vh;
+    box-shadow: 0.5vh 0.5vh 1vh #000000;
+}
+
+#Community-respond:hover {
+    background-color: #11161d;
+}
+
+#send {
+    position: absolute;
+    top: 11vh;
+    left: 47vw;
+    width: 4vw;
+    height: 7vh;
+    border-radius: 1.8vh;
+    background-color: #084cfc;
+    border: solid 1px #151b23;
+    overflow: hidden;
+    transition: transform 0.25s ease-in-out; /* Animation duration */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none; /* Prevents text selection */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    box-shadow: 0.5vh 0.5vh 1vh #000000;
+}
+
+#send:hover {
+    background-color: #0c41c6;
+    border: solid 1px rgb(203, 203, 203);
+    transform: scale(1.03);
+    box-shadow: 1vh 1vh 1vh #000000;
+}
+
+.send-img {
+    width: 1.6vw;
+    height: 3.6vh;
+}
+
+#m2 {
+    position: absolute;
+    top: 30vh;
+    left: 5vw;
+    width: 62vw;
+    height: 63vh;
+    transition: transform 0.35s ease-in-out; /* Animation duration */
+}
+
+#m2:hover {
+    box-shadow: 1vh 1vh 1vh #000000 !important;
+    transform: scale(1.005);
+    background-color: #202932;
+    border: solid 1px #5e646b;
+}
+
+.poll-container {
+    position: absolute;
+    width: 70%;
+    left: 12.5vh;
+    top: 10.5vh;
+}
+
+.poll-option {
+    display: flex;
+    align-items: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    cursor: pointer;
+}
+.poll-option input {
+    display: none;
+}
+
+.custom-radio {
+    width: 2.2vh;
+    height: 2.2vh;
+    border-radius: 50%;
+    border: 1px solid rgb(145, 145, 145);
+    background-color: white !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2vh;
+    overflow: hidden;
+    transition: transform 0.25s ease-in-out; /* Animation duration */
+}
+
+.custom-radio img {
+    display: none;
+    width: 3.3vh;
+    height: 3.1vh;
+}
+
+.selected {
+    transform: scale(1.1); /* Enlarges the selected radio */
+    border: 2px solid white;
+    background-color: white !important;
+}
+
+.percentage {
+    font-size: 2.5vh;
+    color: white;
+    opacity: 0; /* Always visible */
+    font-weight: bold;
+    transform: opacity 0.5s ease-in-out;
+}
+
+#guitar-percent {
+    position: absolute;
+    right: 23vh;
+}
+
+#piano-percent {
+    position: absolute;
+    right: 23vh;
+}
+
+#violin-percent {
+    position: absolute;
+    right: 23vh;
+}
+
+#drums-percent {
+    position: absolute;
+    right: 23vh;
+}
+
+#indian-percent {
+    position: absolute;
+    right: 23vh;
+}
+
+#other-percent {
+    position: absolute;
+    right: 23vh;
+}
+
+.label-poll {
+    font-size: 2.3vh;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.15vh;
+}
+
+.poll-bar-container {
+    width: 75%;
+    background-color: white;
+    height: 1vh;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 5px;
+    position: relative;
+    opacity: 1 !important;
+}
+
+.poll-bar {
+    height: 100%;
+    width: 0%;
+    background: #084cfc; /* Green color */
+    transition: width 0.5s ease-in-out;
+    opacity: 1 !important;
+}
+
+.community-img {
+    position: absolute;
+    top: 1vh;
+    left: 0.6vw;
+    width: 9vh;
+    height: 9vh;
+    cursor: pointer;
+    user-select: none; /* Prevents text selection */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.time-sent {
+    position: absolute;
+    top: 0vh;
+    left: 12vh;
+    font-size: 2.1vh;
+    color: rgb(145, 145, 145);
+    font-family: 'Montserrat';
+    letter-spacing: 0.2vh;
+    cursor: pointer;
+}
+
+.time-sent:hover {
+    color: rgb(203, 203, 203);
+}
+
+.actual-msg {
+    position: absolute;
+    top: 3.2vh;
+    left: 12.2vh;
+    width: 85%;
+    height: 8vh;
+    font-size: 2.3vh;
+    color: white;
+    font-family: 'Montserrat';
+    letter-spacing: 0.2vh;
+    line-height: 3.7vh;
+}
+
+.actual-msg:hover {
+    color: rgb(203, 203, 203);
+}
+
+#More-updates {
+    position: absolute;
+    top: 59vh;
+    right: -4vh;
+    width: 13vw;
+    height: 4vw;
+    font-size: 2.5vh;
+    font-family: 'Montserrat';;
+    background-color: #084cfc;
+    color: white;
+    border: solid 1px #151b23;
+    border-radius: 4vh;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none; /* Prevents text selection */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    transition: transform 0.25s ease-in-out; /* Animation duration */
+    box-shadow: 0px 0px 15px 8px #000000;
+    font-weight: bold;
+    z-index: 1;
+}
+
+#More-updates:hover {
+    background-color: #0c41c6;
+    border: solid 1px rgb(203, 203, 203);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px 10px #000000;
+}
+
+#contact {
+    position: absolute;
+    top: 330vh;
+    left: 4.4vw;
+    width: 95.6vw;
+    height: 50vh;
+    border-top: solid 1px #343c44;
+    border-bottom: solid 1px #343c44;
+}
+
+.contact-title {
+    position: absolute;
+    top: 1.8vh;
+    left: 6vw;
+    font-size: 3.5vh;
+    letter-spacing: 0.5vh;
+    color: white;
+    font-weight: bold !important;
+}
+
+.contact-email {
+    position: absolute;
+    top: 10vh;
+    left: 6vw;
+    font-size: 2.5vh;
+    letter-spacing: 0.3vh;
+    color: white !important;
+}
+
+.horizontal {
+    position: absolute;
+    top: 17vh;
+    left: 5vw;
+    width: 40%;
+    height: 1px;
+    background-color: #343c44;
+    border: #343c44;
+}
+
+#name-label {
+    position: absolute;
+    top: 22vh;
+    left: 6vw;
+    font-size: 2.5vh;
+    letter-spacing: 0.3vh;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#name-label:hover {
+    color: rgb(203, 203, 203);
+}
+
+#name {
+    position: absolute;
+    top: 20.5vh;
+    left: 11.5vw;
+    width: 25vw;
+    height: 2.5vh;
+    border-radius: 1vh;
+    border: solid 1px #343c44;
+    background-color: #151b23;
+    color: rgb(191, 191, 191);
+    padding: 2vh;
+    font-size: 2.5vh;
+    letter-spacing: 0.3vh;
+    box-shadow: 0.5vh 0.5vh 1vh #000000;
+    transition: transform 0.25s ease-in-out;
+}
+
+#name:hover {
+    background-color: #11161d;
+    transform: scale(1.005);
+}
+
+#email-label {
+    position: absolute;
+    top: 22vh;
+    left: 42vw;
+    font-size: 2.5vh;
+    letter-spacing: 0.3vh;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#email-label:hover {
+    color: rgb(203, 203, 203);
+}
+
+#email {
+    position: absolute;
+    top: 20.5vh;
+    left: 47.5vw;
+    width: 25vw;
+    height: 2.5vh;
+    border-radius: 1vh;
+    border: solid 1px #343c44;
+    background-color: #151b23;
+    color: rgb(191, 191, 191);
+    padding: 2vh;
+    font-size: 2.5vh;
+    letter-spacing: 0.3vh;
+    box-shadow: 0.5vh 0.5vh 1vh #000000;
+    transition: transform 0.25s ease-in-out;
+}
+
+#email:hover {
+    background-color: #11161d;
+    transform: scale(1.005);
+}
+
+#message-label {
+    position: absolute;
+    top: 31vh;
+    left: 6vw;
+    font-size: 2.5vh;
+    letter-spacing: 0.3vh;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#message-label:hover {
+    color: rgb(203, 203, 203);
+}
+
+#message {
+    position: absolute;
+    top: 29.5vh;
+    left: 13.5vw;
+    width: 25vw;
+    height: 12vh;
+    border-radius: 1vh;
+    border: solid 1px #343c44;
+    background-color: #151b23;
+    color: rgb(191, 191, 191);
+    padding: 2vh;
+    font-size: 2.5vh;
+    letter-spacing: 0.3vh;
+    box-shadow: 0.5vh 0.5vh 1vh #000000;
+    transition: transform 0.25s ease-in-out;
+    font-family: inherit; /* Use the same font as input */
+    font-size: inherit;
+    resize: none;
+    overflow-y: auto;
+}
+
+#message:hover {
+    background-color: #11161d;
+    transform: scale(1.005);
+}
+
+#contact-submit {
+    position: absolute;
+    top: 32.5vh;
+    left: 53vw;
+    width: 13vw;
+    height: 5vw;
+    font-size: 2.8vh;
+    font-family: 'Montserrat';;
+    background-color: #084cfc;
+    color: white;
+    border: solid 1px #151b23;
+    border-radius: 4vh;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none; /* Prevents text selection */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    transition: transform 0.25s ease-in-out; /* Animation duration */
+    box-shadow: 0px 0px 15px 8px #000000;
+    font-weight: bold;
+    z-index: 1;
+}
+
+#contact-submit:hover {
+    background-color: #0c41c6;
+    border: solid 1px rgb(203, 203, 203);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px 10px #000000;
+}
+
+.copyright {
+    position: absolute;
+    color: rgb(145, 145, 145);
+    right: 50vh;
+    left: 50vh;
+    top: 380vh;
+    font-size: 1.1vw;
 }

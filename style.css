@@ -782,10 +782,6 @@ body.loaded .content {
     word-wrap: break-word; /* Breaks long words */
     white-space: normal; /* Allows text to wrap */
     overflow-wrap: break-word; /* Forces long words to wrap */
-    user-select: none; /* Prevents text selection */
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
 }
 
 .fade {
@@ -1337,7 +1333,7 @@ body.loaded .content {
     background-color: #151b23;
     color: rgb(191, 191, 191);
     padding: 2vh;
-    font-size: 2.5vh;
+    font-size: 2.35vh;
     letter-spacing: 0.3vh;
     box-shadow: 0.5vh 0.5vh 1vh #000000;
     transition: transform 0.25s ease-in-out;
@@ -1374,7 +1370,7 @@ body.loaded .content {
     background-color: #151b23;
     color: rgb(191, 191, 191);
     padding: 2vh;
-    font-size: 2.5vh;
+    font-size: 2.35vh;
     letter-spacing: 0.3vh;
     box-shadow: 0.5vh 0.5vh 1vh #000000;
     transition: transform 0.25s ease-in-out;

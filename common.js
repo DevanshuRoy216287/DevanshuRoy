@@ -116,3 +116,132 @@ document.addEventListener('DOMContentLoaded', function() {
     dots.forEach((dot, index) => dot.addEventListener("click", () => showSlide(index)));
     showSlide(0);
 });
+
+function seeMore(option) {
+    if (option === 0) {
+        alert("Full portfolio is accessible as a premium feature. Sign up or sign in to an existing account, to access.");
+        setTimeout(function() {
+            window.location.href = "sign-in.html";
+        }, 500); // Redirect after 5 seconds
+    } else if (option === 1) {
+        window.location.href = "portfolio-premium.html"; // Redirect immediately
+    }
+}
+
+function updateTimeSent() {
+    const timeElements = document.querySelectorAll('.time-sent'); // Get all elements with class "time-sent"
+    const today = new Date(); // Get current date
+    console.log("Today's Date:", today.toISOString().split('T')[0]); // Print today's date
+
+    timeElements.forEach(element => {
+        const pastDate = new Date(element.textContent.trim()); // Get date from <p> and convert to Date object
+        if (isNaN(pastDate)) return; // Skip if the date is invalid
+
+        const differenceInTime = today - pastDate; // Difference in milliseconds
+        const differenceInDays = Math.floor(differenceInTime / (1000 * 60 * 60 * 24)); // Convert to days
+
+        element.textContent = differenceInDays === 0 ? "Today" : `${differenceInDays} days ago`; // Update text
+    });
+}
+
+updateTimeSent(); // Run function on page load
+
+let votes = {
+    guitar: 25,
+    piano: 15,
+    violin: 10,
+    drums: 10,
+    indian: 35,
+    other: 5
+};
+
+let userSelectedOption = null;
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".percentage").forEach(percent => {
+        percent.style.opacity = "0"; // Hide percentage text initially
+    });
+
+    // Set initial bar background (white) with 0% blue fill
+    document.querySelectorAll(".poll-bar").forEach(bar => {
+        bar.style.width = "0%"; // Start from 0 width
+        bar.style.backgroundColor = "#f0f0f0"; // Light gray (empty bar)
+    });
+});
+
+function selectPoll(option) {
+    // Show percentage text once a user clicks
+    document.querySelectorAll(".percentage").forEach(percent => {
+        percent.style.opacity = "1"; // Show percentages
+    });
+
+    if (userSelectedOption === option) return;
+
+    if (userSelectedOption !== null) {
+        votes[userSelectedOption] = Math.max(votes[userSelectedOption] - 1, 0);
+    }
+
+    votes[option] += 1;
+    userSelectedOption = option;
+
+    // Reset all selections
+    document.querySelectorAll(".custom-radio").forEach(radio => {
+        radio.style.backgroundColor = "transparent";
+        radio.classList.remove("selected");
+        let img = radio.querySelector("img");
+        if (img) {
+            img.style.display = "none";
+        }
+    });
+
+    // Highlight selected radio
+    const selectedRadio = document.getElementById(`${option}-radio`);
+    selectedRadio.style.backgroundColor = "#4CAF50";
+    selectedRadio.querySelector("img").style.display = "block";
+    selectedRadio.classList.add("selected");
+
+    // Update bars and percentages with animation
+    Object.keys(votes).forEach(key => {
+        let widthPercentage = Math.min((votes[key] / 100) * 100, 100);
+        let bar = document.getElementById(`${key}-bar`);
+        
+        bar.style.transition = "width 1s ease-in-out"; // Smooth animation
+        bar.style.width = widthPercentage + "%"; // Gradually increase width
+        bar.style.backgroundColor = "#2196F3"; // Fill color blue
+
+        document.getElementById(`${key}-percent`).textContent = votes[key]; 
+    });
+}
+
+document.getElementById("send").addEventListener("click", function () {
+    document.getElementById("Community-respond").value = ""; // Clear input box
+});
+
+function moreUpdates(number) {
+    if (number==0) {
+        alert("All updates are accessible as a premium feature. Sign up or sign in to an existing account, to access.");
+        setTimeout(function() {
+            window.location.href = "sign-in.html";
+        }, 500); // Redirect after 5 seconds
+    }
+
+    else if (number==1) {
+        window.location.href = "community.html"; // Redirect immediately
+    }
+
+    else {
+        alert("Something went wrong. Please try again.");
+    }
+}
+
+function scrollToSection(id) {
+    const section = document.getElementById(id);
+    const offset = 50; // Adjust this value if needed (for headers/margins)
+    
+    if (section) {
+        window.scrollTo({
+            top: section.offsetTop - offset,
+            behavior: "smooth"
+        });
+    }
+}
